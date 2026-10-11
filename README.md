@@ -136,41 +136,37 @@ Dispatches synchronized synthetic CPU compute iteration loops and physical memor
 ```
 
 ## 5. Local Setup & Execution Guide
-# Step 1: Clone the Repository
+### Step 1: Clone the Repository
 ```bash
 git clone [https://github.com/](https://github.com/)<your-username>/OS_CSP.git
 cd OS_CSP
 ```
-# Step 2: Initialize & Launch the Python Telemetry Bridge
+### Step 2: Initialize & Launch the Python Telemetry Bridge
 Open PowerShell with regular or administrative privileges:
-
-# Create a virtual environment (optional but recommended)
+### Create a virtual environment (optional but recommended)
 ```bash
 python -m venv venv
 .\venv\Scripts\Activate.ps1
 ```
-
-# Install kernel-collector dependencies
+### Install kernel-collector dependencies
 ```bash
 pip install -r requirements.txt
 ```
-
-# Start the FastAPI telemetry server
+### Start the FastAPI telemetry server
 ```bash
 python -m uvicorn backend.main:app --reload --port 8000
 ```
 The backend API will be live at http://localhost:8000 (docs available at /docs).
-
-# Step 3: Launch the React Observability Frontend
+### Step 3: Launch the React Observability Frontend
 Open a second terminal window:
 ```bash
 cd frontend
 ```
-# Install UI and icon dependencies
+### Install UI and icon dependencies
 ```bash
 npm install
 ```
-# Start Vite hot-reloading development server
+### Start Vite hot-reloading development server
 ```bash
 npm run dev
 ```
